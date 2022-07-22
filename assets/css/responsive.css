@@ -1,0 +1,96 @@
+/* ========== MEDIA QUERIE (MEDIUM DEVICES) ========== */
+@media screen and (min-width: 1024px) {
+    nav {
+        flex-direction: column;
+        /* border: solid 1px var(--default-background-nav); */
+        /* box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px; */
+        box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(255, 255, 255, 0.8) -1px 1px 1px 0px;
+        left: 2%;
+        top: 10vh;
+        bottom: 10vh;
+        height: 80vh !important;
+        width: 20% !important;
+        position: fixed;
+    }
+
+    nav .image {
+        margin-top: 60px !important;
+        margin-bottom: 0 !important;
+    }
+
+    nav .author-content {
+        margin: 20px 0px 30px 0px !important;
+    }
+
+    nav .author-content h1 {
+        margin-bottom: 0 !important;
+    }
+
+    .toggler-button {
+        display: none !important;
+    }
+
+    .pages {
+        width: 600vw;
+        /* height: 100vh; */
+    }
+
+    .pages .page .content {
+        width: 70%;
+        height: 80vh !important;
+        left: 28%;
+        top: 10% !important;
+        /* bottom: 10%; */
+        /* border: solid 1px var(--default-background-nav); */
+        /* box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px; */
+    }
+
+    /* .footer .content p {
+        margin: 20px 0 !important;
+    } */
+
+    /* .nav-menu .sidebar__menu {
+        position: absolute;
+        bottom: 5%;
+    } */
+
+    .container__page .author-presentation img {
+        max-width: 100%;
+        overflow: hidden;
+        float: left;
+        margin-right: 35px;
+    }
+
+    .presentation-items {
+        width: 90%;
+    }
+}
+
+/* ========== MEDIA QUERIE (SMALL DEVICES) ========== */
+@media (max-width: 991px) {
+    .container__page .author-presentation img {
+        max-width: 300px;
+        float: none;
+        margin-right: 0px;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 600px),
+screen and (max-height: 700px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav .image {
+        margin: 10px auto !important;
+    }
+
+    nav .author-content {
+        margin: 0 !important;
+    }
+
+    nav .author-content .author-items {
+        display: none;
+    }
+}
