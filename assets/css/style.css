@@ -1,18 +1,22 @@
 @import url('responsive.css');
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Comfortaa:wght@500&display=swap');
 
-/* font-family: 'Caveat', cursive;
-font-family: 'Comfortaa', cursive; */
+/* page heading style font-family: 'Bodoni Moda', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@1,6..96&display=swap');
+/* component h1 h2 h3 style font-family: 'Rajdhani', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+/* body font family font-family: 'Arima', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Arima&display=swap');
+
 
 /* BASIC */
 :root {
     /* application proparties */
     --default-color: #ffffff;
     --primary-color: rgb(198, 5, 5);
-    --default-background-nav: rgba(198, 5, 5, 0.9);
+    --default-background-scrollbar: rgba(136, 165, 191, 0.2);
     --default-background-page: rgba(0, 0, 5, 0.5);
     /* button proparties */
-    --default-button-background: #ffffff;
+    --default-button-background: rgba(136, 165, 191, 0.48);
     --default-button-color: rgb(198, 5, 5);
 }
 
@@ -32,21 +36,85 @@ html {
 
 body {
     overflow: hidden;
-    font-size: 100%;
+    font-size: 1.2rem;
+    font-family: 'Rajdhani', sans-serif;
     color: var(--default-color);
+}
+
+h1 {
+    font-size: 1.75rem;
+}
+
+h2 {
+    font-size: 1.65rem;
+}
+
+h3 {
+    font-size: 1.55rem;
+}
+
+h4 {
+    font-size: 1.45rem;
+}
+
+h1, h2 {
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Arima', cursive;
 }
 
 a {
     text-decoration: none;
 }
 
-.App {
+p {
+    text-align: justify;
+}
+
+.relative {
+    position: relative;
+}
+
+.app-background {
     background: url(../images/bacground.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     height: 100vh;
+}
+
+.container__page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.__page h1,
+.container__page h1 {
+    font-size: 2rem;
+    font-family: 'Bodoni Moda', serif;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.presentation-items {
+    padding: 20px;
+}
+
+.presentation-item p {
+    text-indent: 50px;
+}
+
+.author-presentation {
+    display: flex;
+    align-items: center;
+}
+
+.container__page .author-presentation img {
+    width: 300px;
 }
 
 /* **************************************************** */
@@ -61,6 +129,7 @@ nav {
     z-index: 100;
     font-weight: 300;
     font-size: 1rem;
+    font-family: 'Rajdhani', sans-serif;
 }
 
 nav .image {
@@ -81,13 +150,46 @@ nav .author-content {
 nav .author-content h1 {
     margin-bottom: 20px;
     color: var(--default-color);
+    background: tr;
 }
 
 nav .author-content span {
-    font-size: 1.8rem;
-    font-style: italic;
-    font-family: 'Caveat', cursive;
+    font-size: .9rem;
     color: var(--default-color);
+}
+
+nav .author-items >* {
+    font-family: 'Bodoni Moda', serif;
+}
+
+.navigation-btn {
+    text-align: center;
+    max-width: 100%;
+    width: 100%;
+    display: inline-block;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+    transition: all 0.5s;
+}
+
+.navigation-btn:hover {
+    color: rgba(136, 165, 191, 0.48);
+}
+
+.navigation-btn:hover::after { 
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 1.5px;
+    width: 50%;
+    margin: 0 auto;
+    background: rgba(136, 165, 191, 0.48);
+    content: '';
 }
 
 /* END NAV */
@@ -121,7 +223,7 @@ nav .author-content span {
     bottom: 10%;
     padding: 20px 10px;
     background: var(--default-background-page);
-    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(255, 255, 255, 0.8) 0px 1px 1px 0px;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(255, 255, 255, 0.8) 1px 1px 1px 0px;
 }
 
 .content::-webkit-scrollbar {
@@ -131,7 +233,7 @@ nav .author-content span {
 }
 
 .content::-webkit-scrollbar-thumb {
-    background: var(--default-background-nav);
+    background: var(--default-background-scrollbar);
 }
 
 /* END PAGES */
@@ -150,7 +252,7 @@ nav .author-content span {
 .footer .content p {
     text-align: center;
     font-size: 1.2rem;
-    margin: 5px 0;
+    margin: 20px auto;
 }
 
 .footer .content p a {
@@ -168,7 +270,7 @@ nav .author-content span {
 
 .nav-menu .sidebar__menu {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -248,18 +350,19 @@ nav .author-content span {
     opacity: 0.5;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     transform: translateX(-100%);
 }
 
 .toggled .sidebar__menu {
     justify-content: start !important;
 }
+
 .toggled .sidebar-row {
     /* width: 100%; */
     height: 5% !important;
 }
 
-.toggled .sidebar-row:first-child{
+.toggled .sidebar-row:first-child {
     margin-top: 90px;
 }
