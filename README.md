@@ -26,7 +26,6 @@ export async function appServiceLoad() {
             clearToken();
             appServiceLoad();
         }
-    
         return true;
     }
 }
@@ -35,22 +34,33 @@ export async function appServiceLoad() {
 
 
  ```javascript
-return (
-    <appContext.Provider value={{
-        user,
-        setUser
-    }}>
-        <div className='app-background'>
-            {!contextIsTrue && !error ? (
-                <h3 style={{ color: 'black' }}>Loading...</h3>
-            ) : !contextIsTrue && error ? (
-                <Route><ServerDown /></Route>
-            ) : (
-                <>{props.children}</>
-            )}
-        </div>
-    </appContext.Provider>
-)
+import { useEffect, useState, createContext } from "react";
+export const appContext = createContext();
+
+function ApplicationContextProvider(props) {
+    const [user, setUser] = useState(null);
+
+    // business logic
+
+    return (
+        <appContext.Provider value={{
+            user,
+            setUser
+        }}>
+            <div className='app-background'>
+                {!contextIsTrue && !error ? (
+                    <h3 style={{ color: 'black' }}>Loading...</h3>
+                ) : !contextIsTrue && error ? (
+                    <Route><ServerDown /></Route>
+                ) : (
+                    <>{props.children}</>
+                )}
+            </div>
+        </appContext.Provider>
+    )
+}
+
+export default ApplicationContextProvider;
  ```
 
  <p style="text-align: justify">As yet i think what the contact form to he do - send email or message on facebook messenger. In the this moment she is do not work</p>
