@@ -3,6 +3,8 @@
 
 ##### <a href="https://kkaraivanov.github.io">kkaraivanov.github.io</a>
 
+<div align="left">
+
 #### This is my portfolio project using React framework
 <p style="text-align: justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The "appService.js" file writes a token object to the browser's local storage with a validity of three days to reduce the flow of requests to github and the object is used to represent my data later in the code.</p>
 
@@ -52,17 +54,9 @@ return (
 
  <p style="text-align: justify">As yet i think what the contact form to he do - send email or message on facebook messenger. In the this moment she is do not work</p>
 
-</br></br>
-<div align="left">
-
-<h2 style="display: inline-block;"> 
-
-:star: 
-</h2>
-<p style="display: inline-block;">&nbsp;Click on the star. Thank your</p>
 </div>
-
 <br/><br/>
+
 <p align="center">
   <a href="https://dotnet.microsoft.com/">
     <img src="https://www.vectorlogo.zone/logos/dotnet/dotnet-ar21.svg" alt="dotnet" style="vertical-align:top; margin:4px 10px;">
@@ -92,8 +86,8 @@ return (
     <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="git-scm" style="vertical-align:top; margin:4px">
   </a>
 </p>
-
 <br/><br/>
+
 <div align="center">
 <a href="#"><img src="https://github-profile-trophy.vercel.app/?username=kkaraivanov&row=1"></a>
 </div>
