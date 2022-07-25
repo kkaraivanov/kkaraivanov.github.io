@@ -26,6 +26,7 @@ export async function appServiceLoad() {
             clearToken();
             appServiceLoad();
         }
+    
         return true;
     }
 }
